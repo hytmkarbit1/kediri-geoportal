@@ -1,4 +1,7 @@
 // Main Application Entry Point
+import proj4 from 'proj4';
+window.proj4 = proj4;
+
 import { initAuth, setupAuthUI } from './auth/auth.js';
 import { initMap } from './map/map.js';
 import { loadGovernmentLayers, loadCrowdLayers } from './map/layers.js';

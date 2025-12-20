@@ -4,9 +4,6 @@ import GeoRasterLayer from 'georaster-layer-for-leaflet';
 import proj4 from 'proj4';
 import { getLayerGroup, getMap } from './map.js';
 
-// Ensure proj4 is available globally for georaster-layer-for-leaflet
-window.proj4 = proj4;
-
 export async function loadRasterLayer() {
     console.log('🏔️ Loading raster layer (DEM)...');
     try {
