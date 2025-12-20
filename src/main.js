@@ -22,7 +22,7 @@ async function init() {
         console.log('✅ Authentication initialized');
 
         // Initialize map
-        initMap();
+        await initMap();
         console.log('✅ Map initialized');
 
         // Create map controls
