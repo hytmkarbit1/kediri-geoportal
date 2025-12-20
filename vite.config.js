@@ -14,6 +14,12 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 map: resolve(__dirname, 'map.html'),
                 admin: resolve(__dirname, 'admin.html')
+            },
+            external: ['proj4'],
+            output: {
+                globals: {
+                    proj4: 'proj4'
+                }
             }
         },
         minify: 'terser',
