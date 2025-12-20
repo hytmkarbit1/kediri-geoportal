@@ -1,6 +1,8 @@
 // Main Application Entry Point
-import proj4 from 'proj4';
+import * as proj4_module from 'proj4';
+const proj4 = proj4_module.default || proj4_module;
 window.proj4 = proj4;
+console.log('🌍 Proj4 initialized:', typeof window.proj4.defs === 'function' ? 'OK' : 'FAIL');
 
 import { initAuth, setupAuthUI } from './auth/auth.js';
 import { initMap } from './map/map.js';
