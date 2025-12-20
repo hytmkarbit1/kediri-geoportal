@@ -1,10 +1,5 @@
 // Main Application Entry Point
-// Proj4 is loaded via CDN in HTML to avoid bundling issues
-// Ensure it's globally available for other libraries
-if (typeof window !== 'undefined' && window.proj4) {
-    window.proj4 = window.proj4;
-}
-console.log('🌍 Proj4 status:', typeof window.proj4 === 'function' ? 'OK' : 'MISSING');
+// Proj4 is handled by Vite bundling
 
 import { initAuth, setupAuthUI } from './auth/auth.js';
 import { initMap } from './map/map.js';

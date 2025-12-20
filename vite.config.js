@@ -5,11 +5,6 @@ import { resolve } from 'path';
 export default defineConfig({
     root: '.',
     publicDir: 'public',
-    resolve: {
-        alias: {
-            'proj4': resolve(__dirname, 'src/utils/proj4-shim.js')
-        }
-    },
     build: {
         outDir: 'dist',
         emptyOutDir: true,
@@ -29,7 +24,7 @@ export default defineConfig({
         }
     },
     optimizeDeps: {
-        include: ['leaflet', 'leaflet-draw', '@supabase/supabase-js']
+        include: ['leaflet', 'leaflet-draw', '@supabase/supabase-js', 'proj4']
     },
     server: {
         port: 5173,
