@@ -1,8 +1,6 @@
 // Raster Data Module
 import parseGeoraster from 'georaster';
 import GeoRasterLayer from 'georaster-layer-for-leaflet';
-import * as proj4_module from 'proj4';
-const proj4 = proj4_module.default || proj4_module;
 import { getLayerGroup, getMap } from './map.js';
 
 export async function loadRasterLayer() {
