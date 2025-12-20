@@ -1,0 +1,240 @@
+{
+    "type": "FeatureCollection",
+    "name": "admin_boundaries",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kota Kediri",
+                "admin_level": "city",
+                "code": "3571",
+                "population": 286796,
+                "description": "Kediri City administrative boundary"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.000,
+                                -7.800
+                            ],
+                            [
+                                112.040,
+                                -7.800
+                            ],
+                            [
+                                112.040,
+                                -7.840
+                            ],
+                            [
+                                112.000,
+                                -7.840
+                            ],
+                            [
+                                112.000,
+                                -7.800
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kecamatan Mojoroto",
+                "admin_level": "district",
+                "code": "3571010",
+                "population": 72000,
+                "description": "Mojoroto District"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.000,
+                                -7.800
+                            ],
+                            [
+                                112.020,
+                                -7.800
+                            ],
+                            [
+                                112.020,
+                                -7.820
+                            ],
+                            [
+                                112.000,
+                                -7.820
+                            ],
+                            [
+                                112.000,
+                                -7.800
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kecamatan Kota",
+                "admin_level": "district",
+                "code": "3571020",
+                "population": 68000,
+                "description": "Kota District - City Center"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.020,
+                                -7.800
+                            ],
+                            [
+                                112.040,
+                                -7.800
+                            ],
+                            [
+                                112.040,
+                                -7.820
+                            ],
+                            [
+                                112.020,
+                                -7.820
+                            ],
+                            [
+                                112.020,
+                                -7.800
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kecamatan Pesantren",
+                "admin_level": "district",
+                "code": "3571030",
+                "population": 75000,
+                "description": "Pesantren District"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.000,
+                                -7.820
+                            ],
+                            [
+                                112.020,
+                                -7.820
+                            ],
+                            [
+                                112.020,
+                                -7.840
+                            ],
+                            [
+                                112.000,
+                                -7.840
+                            ],
+                            [
+                                112.000,
+                                -7.820
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kelurahan Sukorame",
+                "admin_level": "village",
+                "code": "3571010001",
+                "population": 8500,
+                "description": "Sukorame Village in Mojoroto District"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.005,
+                                -7.805
+                            ],
+                            [
+                                112.012,
+                                -7.805
+                            ],
+                            [
+                                112.012,
+                                -7.812
+                            ],
+                            [
+                                112.005,
+                                -7.812
+                            ],
+                            [
+                                112.005,
+                                -7.805
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kelurahan Kampungdalem",
+                "admin_level": "village",
+                "code": "3571020001",
+                "population": 9200,
+                "description": "Kampungdalem Village in Kota District"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.022,
+                                -7.805
+                            ],
+                            [
+                                112.030,
+                                -7.805
+                            ],
+                            [
+                                112.030,
+                                -7.812
+                            ],
+                            [
+                                112.022,
+                                -7.812
+                            ],
+                            [
+                                112.022,
+                                -7.805
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

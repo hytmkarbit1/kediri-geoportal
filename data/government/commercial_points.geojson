@@ -1,0 +1,166 @@
+{
+    "type": "FeatureCollection",
+    "name": "commercial_points",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pasar Besar Kediri",
+                "business_type": "Traditional Market",
+                "address": "Jl. Pasar Besar No. 1",
+                "description": "Main traditional market in Kediri"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0180,
+                    -7.8150
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kediri Mall",
+                "business_type": "Shopping Mall",
+                "address": "Jl. Brawijaya No. 100",
+                "description": "Modern shopping center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0165,
+                    -7.8145
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bank BRI Cabang Kediri",
+                "business_type": "Bank",
+                "address": "Jl. Veteran No. 45",
+                "description": "Bank Rakyat Indonesia branch"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0175,
+                    -7.8160
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rumah Sakit Baptis Kediri",
+                "business_type": "Hospital",
+                "address": "Jl. Brigjen Katamso No. 117",
+                "description": "Private hospital"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0140,
+                    -7.8190
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hotel Puri Asri",
+                "business_type": "Hotel",
+                "address": "Jl. Ahmad Yani No. 23",
+                "description": "3-star hotel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0155,
+                    -7.8135
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Alfamart Mojoroto",
+                "business_type": "Minimarket",
+                "address": "Jl. Mojoroto No. 56",
+                "description": "24-hour convenience store"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0120,
+                    -7.8170
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Restoran Ayam Goreng Mbah Karto",
+                "business_type": "Restaurant",
+                "address": "Jl. Dhoho No. 89",
+                "description": "Famous fried chicken restaurant"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0195,
+                    -7.8155
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Toko Buku Gramedia",
+                "business_type": "Bookstore",
+                "address": "Kediri Mall Lt. 2",
+                "description": "Bookstore chain"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0167,
+                    -7.8143
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SPBU Pertamina Brawijaya",
+                "business_type": "Gas Station",
+                "address": "Jl. Brawijaya No. 234",
+                "description": "Pertamina gas station"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0200,
+                    -7.8180
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Apotik Kimia Farma",
+                "business_type": "Pharmacy",
+                "address": "Jl. Pemuda No. 12",
+                "description": "Government pharmacy chain"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0148,
+                    -7.8165
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "type": "FeatureCollection",
+    "name": "education_points",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SDN Kediri 1",
+                "education_type": "elementary",
+                "address": "Jl. Brawijaya No. 45",
+                "student_capacity": 480,
+                "description": "Public Elementary School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0167,
+                    -7.8167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SMPN 1 Kediri",
+                "education_type": "junior_high",
+                "address": "Jl. Veteran No. 12",
+                "student_capacity": 720,
+                "description": "Public Junior High School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0180,
+                    -7.8150
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SMAN 1 Kediri",
+                "education_type": "senior_high",
+                "address": "Jl. Pemuda No. 8",
+                "student_capacity": 960,
+                "description": "Public Senior High School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0145,
+                    -7.8185
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Universitas Nusantara PGRI Kediri",
+                "education_type": "university",
+                "address": "Jl. KH. Ahmad Dahlan No. 76",
+                "student_capacity": 5000,
+                "description": "Private University - Teacher Training"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0125,
+                    -7.8200
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "TK Pembina Kediri",
+                "education_type": "kindergarten",
+                "address": "Jl. Pahlawan No. 23",
+                "student_capacity": 120,
+                "description": "Public Kindergarten"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0190,
+                    -7.8140
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SDN Kediri 5",
+                "education_type": "elementary",
+                "address": "Jl. Sukarno Hatta No. 67",
+                "student_capacity": 420,
+                "description": "Public Elementary School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0210,
+                    -7.8175
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SMKN 2 Kediri",
+                "education_type": "senior_high",
+                "address": "Jl. Industri No. 34",
+                "student_capacity": 840,
+                "description": "Vocational High School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0155,
+                    -7.8125
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Institut Agama Islam Tribakti",
+                "education_type": "university",
+                "address": "Jl. Telaga Warna",
+                "student_capacity": 3500,
+                "description": "Islamic Higher Education Institute"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    112.0095,
+                    -7.8220
+                ]
+            }
+        }
+    ]
+}

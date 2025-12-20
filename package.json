@@ -1,0 +1,36 @@
+{
+  "name": "kediri-geoportal",
+  "version": "1.0.0",
+  "description": "Participatory Geoportal for Kediri - A web-based platform for collaborative mapping",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "import-data": "node scripts/import-admin-data.js",
+    "import-supabase": "node scripts/import-to-supabase.js"
+  },
+  "keywords": [
+    "geoportal",
+    "gis",
+    "participatory-mapping",
+    "supabase",
+    "leaflet"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.6.1",
+    "georaster": "^1.6.0",
+    "georaster-layer-for-leaflet": "^3.10.0",
+    "jszip": "^3.10.1",
+    "leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
+    "shapefile": "^0.6.6",
+    "shp-write": "^0.3.2"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  }
+}

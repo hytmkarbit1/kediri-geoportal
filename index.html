@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kediri Geoportal - Participatory Mapping</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/src/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="landing-container">
+        <nav class="landing-nav">
+            <div class="logo">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Kediri Geoportal</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <!-- Admin button, hidden by default -->
+                <a href="/admin.html" id="admin-link" class="btn-text" style="display: none;">Admin Dashboard</a>
+                <a href="/map.html" class="btn-primary">Launch Map</a>
+            </div>
+        </nav>
+
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1>Discover & Shape <br> <span class="highlight">Kediri's Future</span></h1>
+                <p>A collaborative platform for mapping, planning, and managing our city's resources together.</p>
+                <div class="hero-buttons">
+                    <a href="/map.html" class="btn-primary btn-lg">
+                        <i class="fa-solid fa-rocket"></i> Start Exploring
+                    </a>
+                    <a href="#features" class="btn-secondary btn-lg">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="map-preview-card">
+                    <div class="card-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="pulse-ring"></div>
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="features" class="features-section">
+            <div class="feature-card">
+                <i class="fa-solid fa-users-viewfinder"></i>
+                <h3>Participatory</h3>
+                <p>Contribute data directly to the map. Your local knowledge matters.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Open Data</h3>
+                <p>Access official government data and community-verified datasets.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Analysis</h3>
+                <p>Visualize land cover, infrastructure, and urban growth patterns.</p>
+            </div>
+        </section>
+
+        <footer class="landing-footer">
+            <p>&copy; 2025 Kediri Geoportal. Built for the Community.</p>
+        </footer>
+    </div>
+
+    <!-- Admin Visibility Logic -->
+    <script type="module">
+        import { supabase } from './src/config/supabase.js';
+
+        async function checkAdmin() {
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) return;
+
+            // Check if user is admin
+            const { data, error } = await supabase
+                .from('user_roles')
+                .select('role')
+                .eq('user_id', user.id)
+                .single();
+
+            if (!error && data && data.role === 'admin') {
+                document.getElementById('admin-link').style.display = 'inline-block';
+            }
+        }
+
+        checkAdmin();
+    </script>
+</body>
+
+</html>

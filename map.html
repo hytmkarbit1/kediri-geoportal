@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kediri Participatory Geoportal</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css?v=2">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🗺️ Kediri Geoportal</h1>
+            <a href="/" class="btn-home">🏠 Home</a>
+        </div>
+    </header>
+
+    <!-- Main Container (Flex Layout) -->
+    <div class="main-container">
+        <!-- Tools Panel (Left Sidebar) -->
+        <aside id="tools-panel" class="sidebar left auth-only" style="display: none;">
+            <h3>Tools</h3>
+            <button id="toggle-drawing-btn" class="btn btn-tool">
+                ✏️ Digitize Features
+            </button>
+            <button id="upload-shapefile-btn" class="btn btn-tool">
+                📤 Upload Shapefile
+            </button>
+            <button id="download-data-btn" class="btn btn-tool">
+                📥 Download Data
+            </button>
+            <input type="file" id="shapefile-input" accept=".zip" style="display: none;" />
+
+            <!-- Layer Control Container -->
+            <div id="layer-control-container" style="margin-top: 20px;">
+                <!-- Custom layer control can go here -->
+            </div>
+        </aside>
+
+        <!-- Main Map -->
+        <div id="map"></div>
+
+        <!-- Auth Panel (Right Sidebar) -->
+        <aside id="auth-panel" class="sidebar right">
+            <div id="login-form">
+                <h3>Login / Sign Up</h3>
+                <input type="email" id="email-input" placeholder="Email" />
+                <input type="password" id="password-input" placeholder="Password" />
+                <div class="button-group">
+                    <button id="login-btn" class="btn btn-primary">Login</button>
+                    <button id="signup-btn" class="btn btn-secondary">Sign Up</button>
+                </div>
+            </div>
+            <div id="user-info" style="display: none;">
+                <h3>User Info</h3>
+                <p><strong>Email:</strong> <span id="user-email"></span></p>
+                <p><strong>Role:</strong> <span id="user-role"></span></p>
+                <button id="logout-btn" class="btn btn-danger">Logout</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Admin Panel (Floating Bottom Right) -->
+    <div id="admin-panel" class="panel admin-only" style="display: none;">
+        <h3>Admin Tools</h3>
+        <p>Manage government data and approve submissions</p>
+        <a href="/admin.html" id="approve-submissions-btn" class="btn btn-admin"
+            style="text-decoration: none; display: block; text-align: center;">
+            ✅ Review Submissions
+        </a>
+    </div>
+
+    <!-- Message Display -->
+    <div id="message-display" class="message" style="display: none;"></div>
+
+    <!-- Attribute Form Dialog -->
+    <div id="attribute-dialog" class="dialog" style="display: none;">
+        <div class="dialog-content">
+            <h3>Feature Attributes</h3>
+            <form id="attribute-form">
+                <label for="feature-name">Name *</label>
+                <input type="text" id="feature-name" required />
+
+                <label for="feature-type">Type *</label>
+                <select id="feature-type" required>
+                    <option value="">Select type...</option>
+                    <option value="landmark">Landmark</option>
+                    <option value="facility">Facility</option>
+                    <option value="infrastructure">Infrastructure</option>
+                    <option value="natural">Natural Feature</option>
+                    <option value="hazard">Hazard</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="feature-description">Description</label>
+                <textarea id="feature-description" rows="3"></textarea>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" id="cancel-attribute-btn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Download Dialog -->
+    <div id="download-dialog" class="dialog" style="display: none;">
+        <div class="dialog-content">
+            <h3>Download Data</h3>
+
+            <div class="download-section">
+                <h4>Government Data</h4>
+                <button id="download-land-cover" class="btn btn-download">Land Cover</button>
+                <button id="download-admin-boundaries" class="btn btn-download">Admin Boundaries</button>
+                <button id="download-buildings" class="btn btn-download">Buildings</button>
+                <button id="download-commercial" class="btn btn-download">Commercial Points</button>
+                <button id="download-roads" class="btn btn-download">Roads</button>
+                <button id="download-education" class="btn btn-download">Education Points</button>
+            </div>
+
+            <div class="download-section">
+                <h4>Crowd Data</h4>
+                <button id="download-user-points" class="btn btn-download">User Points</button>
+                <button id="download-user-polygons" class="btn btn-download">User Polygons</button>
+            </div>
+
+            <button id="close-download-dialog" class="btn btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+
+    <!-- Proj4 for Raster Reprojection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+
+    <!-- Main Application Script -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

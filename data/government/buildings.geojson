@@ -1,0 +1,294 @@
+{
+    "type": "FeatureCollection",
+    "name": "buildings",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Balai Kota Kediri",
+                "building_type": "Government Office",
+                "floors": 4,
+                "description": "Kediri City Hall"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0175,
+                            -7.8155
+                        ],
+                        [
+                            112.0180,
+                            -7.8155
+                        ],
+                        [
+                            112.0180,
+                            -7.8160
+                        ],
+                        [
+                            112.0175,
+                            -7.8160
+                        ],
+                        [
+                            112.0175,
+                            -7.8155
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Masjid Agung Kediri",
+                "building_type": "Religious",
+                "floors": 2,
+                "description": "Grand Mosque of Kediri"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0170,
+                            -7.8165
+                        ],
+                        [
+                            112.0177,
+                            -7.8165
+                        ],
+                        [
+                            112.0177,
+                            -7.8172
+                        ],
+                        [
+                            112.0170,
+                            -7.8172
+                        ],
+                        [
+                            112.0170,
+                            -7.8165
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gedung Olahraga Jayabaya",
+                "building_type": "Sports",
+                "floors": 1,
+                "description": "Indoor sports arena"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0145,
+                            -7.8175
+                        ],
+                        [
+                            112.0155,
+                            -7.8175
+                        ],
+                        [
+                            112.0155,
+                            -7.8185
+                        ],
+                        [
+                            112.0145,
+                            -7.8185
+                        ],
+                        [
+                            112.0145,
+                            -7.8175
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Terminal Bus Tamanan",
+                "building_type": "Transportation",
+                "floors": 1,
+                "description": "Main bus terminal"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0095,
+                            -7.8210
+                        ],
+                        [
+                            112.0110,
+                            -7.8210
+                        ],
+                        [
+                            112.0110,
+                            -7.8225
+                        ],
+                        [
+                            112.0095,
+                            -7.8225
+                        ],
+                        [
+                            112.0095,
+                            -7.8210
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kantor Pos Kediri",
+                "building_type": "Government Office",
+                "floors": 2,
+                "description": "Main post office"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0182,
+                            -7.8148
+                        ],
+                        [
+                            112.0187,
+                            -7.8148
+                        ],
+                        [
+                            112.0187,
+                            -7.8153
+                        ],
+                        [
+                            112.0182,
+                            -7.8153
+                        ],
+                        [
+                            112.0182,
+                            -7.8148
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Perpustakaan Daerah",
+                "building_type": "Public Facility",
+                "floors": 3,
+                "description": "Regional public library"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0160,
+                            -7.8140
+                        ],
+                        [
+                            112.0168,
+                            -7.8140
+                        ],
+                        [
+                            112.0168,
+                            -7.8148
+                        ],
+                        [
+                            112.0160,
+                            -7.8148
+                        ],
+                        [
+                            112.0160,
+                            -7.8140
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Puskesmas Mojoroto",
+                "building_type": "Healthcare",
+                "floors": 2,
+                "description": "Community health center"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0115,
+                            -7.8165
+                        ],
+                        [
+                            112.0122,
+                            -7.8165
+                        ],
+                        [
+                            112.0122,
+                            -7.8172
+                        ],
+                        [
+                            112.0115,
+                            -7.8172
+                        ],
+                        [
+                            112.0115,
+                            -7.8165
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Stasiun Kereta Api Kediri",
+                "building_type": "Transportation",
+                "floors": 1,
+                "description": "Railway station"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            112.0125,
+                            -7.8195
+                        ],
+                        [
+                            112.0140,
+                            -7.8195
+                        ],
+                        [
+                            112.0140,
+                            -7.8205
+                        ],
+                        [
+                            112.0125,
+                            -7.8205
+                        ],
+                        [
+                            112.0125,
+                            -7.8195
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

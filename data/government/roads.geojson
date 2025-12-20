@@ -1,0 +1,198 @@
+{
+    "type": "FeatureCollection",
+    "name": "roads",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Brawijaya",
+                "road_type": "Primary",
+                "surface": "Asphalt",
+                "length_meters": 3500,
+                "description": "Main arterial road through city center"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0100,
+                        -7.8150
+                    ],
+                    [
+                        112.0200,
+                        -7.8150
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Veteran",
+                "road_type": "Primary",
+                "surface": "Asphalt",
+                "length_meters": 2800,
+                "description": "Major road connecting north-south"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0175,
+                        -7.8100
+                    ],
+                    [
+                        112.0175,
+                        -7.8200
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Dhoho",
+                "road_type": "Secondary",
+                "surface": "Asphalt",
+                "length_meters": 4200,
+                "description": "Secondary road through commercial area"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0120,
+                        -7.8160
+                    ],
+                    [
+                        112.0220,
+                        -7.8160
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Ahmad Yani",
+                "road_type": "Primary",
+                "surface": "Asphalt",
+                "length_meters": 3100,
+                "description": "Primary road to eastern districts"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0150,
+                        -7.8130
+                    ],
+                    [
+                        112.0250,
+                        -7.8130
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Mojoroto",
+                "road_type": "Secondary",
+                "surface": "Asphalt",
+                "length_meters": 2500,
+                "description": "Road through Mojoroto district"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0110,
+                        -7.8170
+                    ],
+                    [
+                        112.0160,
+                        -7.8170
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Pemuda",
+                "road_type": "Secondary",
+                "surface": "Asphalt",
+                "length_meters": 1800,
+                "description": "Secondary road near schools"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0140,
+                        -7.8180
+                    ],
+                    [
+                        112.0180,
+                        -7.8180
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Sukarno Hatta",
+                "road_type": "Primary",
+                "surface": "Asphalt",
+                "length_meters": 5600,
+                "description": "Ring road around city"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0050,
+                        -7.8100
+                    ],
+                    [
+                        112.0100,
+                        -7.8100
+                    ],
+                    [
+                        112.0100,
+                        -7.8200
+                    ],
+                    [
+                        112.0050,
+                        -7.8200
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jalan Pahlawan",
+                "road_type": "Tertiary",
+                "surface": "Asphalt",
+                "length_meters": 1200,
+                "description": "Local road in residential area"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        112.0185,
+                        -7.8135
+                    ],
+                    [
+                        112.0195,
+                        -7.8145
+                    ]
+                ]
+            }
+        }
+    ]
+}

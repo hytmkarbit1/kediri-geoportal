@@ -1,0 +1,196 @@
+{
+    "type": "FeatureCollection",
+    "name": "land_cover",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Urban Area - Kediri City Center",
+                "land_type": "Urban",
+                "area_hectares": 250.5,
+                "description": "Main urban area of Kediri city"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.010,
+                                -7.810
+                            ],
+                            [
+                                112.020,
+                                -7.810
+                            ],
+                            [
+                                112.020,
+                                -7.820
+                            ],
+                            [
+                                112.010,
+                                -7.820
+                            ],
+                            [
+                                112.010,
+                                -7.810
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Agricultural Land - North Kediri",
+                "land_type": "Agriculture",
+                "area_hectares": 450.2,
+                "description": "Rice fields and agricultural area"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.005,
+                                -7.800
+                            ],
+                            [
+                                112.015,
+                                -7.800
+                            ],
+                            [
+                                112.015,
+                                -7.808
+                            ],
+                            [
+                                112.005,
+                                -7.808
+                            ],
+                            [
+                                112.005,
+                                -7.800
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Green Space - City Park",
+                "land_type": "Park",
+                "area_hectares": 15.8,
+                "description": "Public park and recreation area"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.014,
+                                -7.815
+                            ],
+                            [
+                                112.018,
+                                -7.815
+                            ],
+                            [
+                                112.018,
+                                -7.818
+                            ],
+                            [
+                                112.014,
+                                -7.818
+                            ],
+                            [
+                                112.014,
+                                -7.815
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Residential Area - East Kediri",
+                "land_type": "Residential",
+                "area_hectares": 180.3,
+                "description": "Residential housing area"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.022,
+                                -7.812
+                            ],
+                            [
+                                112.030,
+                                -7.812
+                            ],
+                            [
+                                112.030,
+                                -7.820
+                            ],
+                            [
+                                112.022,
+                                -7.820
+                            ],
+                            [
+                                112.022,
+                                -7.812
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Forest Area - South Hills",
+                "land_type": "Forest",
+                "area_hectares": 320.7,
+                "description": "Protected forest area in southern hills"
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                112.008,
+                                -7.825
+                            ],
+                            [
+                                112.020,
+                                -7.825
+                            ],
+                            [
+                                112.020,
+                                -7.835
+                            ],
+                            [
+                                112.008,
+                                -7.835
+                            ],
+                            [
+                                112.008,
+                                -7.825
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
