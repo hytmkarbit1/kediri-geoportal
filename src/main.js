@@ -1,5 +1,7 @@
 // Main Application Entry Point
-// Proj4 is handled by Vite bundling
+// CRITICAL: Import proj4 FIRST to make it globally available for georaster
+import proj4 from 'proj4';
+window.proj4 = proj4;
 
 import { initAuth, setupAuthUI } from './auth/auth.js';
 import { initMap, getMap, layerGroups } from './map/map.js';

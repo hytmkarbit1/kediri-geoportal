@@ -1,11 +1,7 @@
 // Raster Data Module
-import proj4 from 'proj4';
 import parseGeoraster from 'georaster';
 import GeoRasterLayer from 'georaster-layer-for-leaflet';
 import { getLayerGroup, getMap } from './map.js';
-
-// Make proj4 globally available for georaster
-window.proj4 = proj4;
 
 export async function loadRasterLayer() {
     // Check if raster loading is enabled (disabled in production/Vercel)
