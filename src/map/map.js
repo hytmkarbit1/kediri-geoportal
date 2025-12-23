@@ -103,6 +103,10 @@ export async function initializeMap(containerId = 'map', options = {}) {
         layerGroups.rasterData = L.layerGroup().addTo(map);
         layerGroups.drawingLayer = L.featureGroup().addTo(map);
 
+        // Add layer groups for official_data (RTRW and other datasets)
+        layerGroups.rtrw_banyakan = L.layerGroup().addTo(map);
+        layerGroups.official_data = L.layerGroup().addTo(map);
+
         console.log('✅ Map initialized successfully');
         return map;
 

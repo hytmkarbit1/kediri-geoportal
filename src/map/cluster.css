@@ -1,0 +1,40 @@
+/* Marker Cluster Styles */
+@import url('https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css');
+@import url('https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css');
+
+/* Custom cluster styling */
+.marker-cluster-small {
+    background-color: rgba(37, 99, 235, 0.6);
+}
+
+.marker-cluster-small div {
+    background-color: rgba(37, 99, 235, 0.8);
+    color: white;
+    font-weight: 600;
+}
+
+.marker-cluster-medium {
+    background-color: rgba(245, 158, 11, 0.6);
+}
+
+.marker-cluster-medium div {
+    background-color: rgba(245, 158, 11, 0.8);
+    color: white;
+    font-weight: 600;
+}
+
+.marker-cluster-large {
+    background-color: rgba(239, 68, 68, 0.6);
+}
+
+.marker-cluster-large div {
+    background-color: rgba(239, 68, 68, 0.8);
+    color: white;
+    font-weight: 600;
+}
+
+/* Cluster hover effect */
+.marker-cluster:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}

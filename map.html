@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kediri Participatory Geoportal</title>
+    <title>Map - Kediri Geoportal</title>
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="/src/styles/variables.css">
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles.css?v=2">
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/src/map.css">
 </head>
 
 <body>
@@ -135,6 +138,9 @@
             <button id="close-download-dialog" class="btn btn-secondary">Close</button>
         </div>
     </div>
+
+    <!-- Proj4 (REQUIRED for georaster coordinate transformations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

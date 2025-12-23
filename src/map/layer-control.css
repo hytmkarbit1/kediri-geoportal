@@ -1,0 +1,178 @@
+/* Modern Layer Control Styles - Simplified */
+
+.custom-layer-control {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    z-index: 2000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.custom-layer-control.expanded {
+    width: 280px;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    padding: 16px;
+}
+
+.layer-control-toggle {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-control-toggle:hover {
+    background-color: #f3f4f6;
+}
+
+.custom-layer-control.expanded .layer-control-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    left: auto;
+}
+
+.control-sections {
+    display: none;
+    margin-top: 40px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+
+.custom-layer-control.expanded .control-sections {
+    display: block;
+}
+
+.control-section {
+    margin-bottom: 20px;
+}
+
+.control-section:last-child {
+    margin-bottom: 0;
+}
+
+.control-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Radio button styling for basemaps */
+.radio-label {
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+}
+
+.radio-label:hover {
+    background-color: #f9fafb;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+}
+
+.radio-label span {
+    font-size: 13px;
+    color: #111827;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Checkbox styling for overlays */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 4px;
+}
+
+.checkbox-label:hover {
+    background-color: #f9fafb;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: #10b981;
+}
+
+.checkbox-label span {
+    font-size: 13px;
+    color: #111827;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Active state */
+.radio-label input[type="radio"]:checked+span,
+.checkbox-label input[type="checkbox"]:checked+span {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Section divider */
+.control-section+.control-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+/* Scrollbar styling */
+.control-sections::-webkit-scrollbar {
+    width: 6px;
+}
+
+.control-sections::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+}
+
+.control-sections::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.control-sections::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .custom-layer-control.expanded {
+        width: 240px;
+    }
+}

@@ -14,13 +14,38 @@ export function initDrawingTools() {
     const map = getMap();
     const drawingLayer = getLayerGroup('drawingLayer');
 
+    // WORKAROUND: Patch the buggy readableArea function in Leaflet.draw
+    // This prevents the "type is not defined" error when drawing polygons
+    if (L.GeometryUtil && L.GeometryUtil.readableArea) {
+        L.GeometryUtil.readableArea = function (area, isMetric) {
+            // Simple area formatter without the buggy type parameter
+            const areaStr = area.toFixed(2);
+            return isMetric ? areaStr + ' m²' : areaStr + ' sq ft';
+        };
+    }
+
     // Drawing control options
     drawControl = new L.Control.Draw({
         position: 'topleft',
         draw: {
-            polyline: false,
-            rectangle: false,
-            circle: false,
+            polyline: {
+                shapeOptions: {
+                    color: '#3388ff',
+                    weight: 4
+                }
+            },
+            rectangle: {
+                shapeOptions: {
+                    color: '#3388ff',
+                    fillOpacity: 0.4
+                }
+            },
+            circle: {
+                shapeOptions: {
+                    color: '#3388ff',
+                    fillOpacity: 0.4
+                }
+            },
             circlemarker: false,
             marker: {
                 icon: L.icon({
@@ -33,7 +58,10 @@ export function initDrawingTools() {
             },
             polygon: {
                 allowIntersection: true,
-                showArea: true
+                shapeOptions: {
+                    color: '#3388ff',
+                    fillOpacity: 0.4
+                }
             }
         },
         edit: {
@@ -66,7 +94,7 @@ export function toggleDrawing() {
         drawControl.addTo(map);
         isDrawingEnabled = true;
         document.getElementById('toggle-drawing-btn')?.classList.add('active');
-        showMessage('Drawing mode enabled. Click map to add points. Double-click to finish.', 'info');
+        showMessage('Drawing mode enabled. Use the toolbar to draw markers, polygons, rectangles, circles, or lines.', 'info');
     }
 }
 
@@ -143,18 +171,26 @@ async function saveFeature(layer, geometryType, featureName, featureType, descri
 
     // Convert to GeoJSON
     const geojson = layer.toGeoJSON();
-    const geometry = geojson.geometry;
+    let geometry = geojson.geometry;
 
     // Determine table and schema based on geometry type
     let tableName;
     const schemaName = 'crowd_data';
 
+    // Map Leaflet.draw types to database tables
     if (geometryType === 'marker') {
         tableName = 'user_points';
-    } else if (geometryType === 'polygon') {
+    } else if (geometryType === 'polygon' || geometryType === 'rectangle' || geometryType === 'circle') {
+        // Rectangle and circle are converted to polygons by Leaflet
         tableName = 'user_polygons';
+    } else if (geometryType === 'polyline') {
+        // Polylines need special handling - they're LineString geometries
+        // For now, we'll store them in user_polygons table as well
+        // You may want to create a separate user_lines table in the future
+        tableName = 'user_polygons';
+        console.log('Note: Polylines are stored in user_polygons table. Consider creating a user_lines table.');
     } else {
-        throw new Error('Unsupported geometry type');
+        throw new Error(`Unsupported geometry type: ${geometryType}`);
     }
 
     // Prepare record

@@ -1,0 +1,154 @@
+/* Toggleable Legend Styles */
+
+.legend-panel {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.legend-panel.collapsed {
+    width: 48px;
+    height: 48px;
+}
+
+.legend-toggle-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    z-index: 10;
+}
+
+.legend-toggle-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.legend-content {
+    padding: 16px;
+    overflow-y: auto;
+    max-height: 360px;
+}
+
+.legend-panel.collapsed .legend-content {
+    display: none;
+}
+
+.legend-title {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    padding-right: 30px;
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+}
+
+.legend-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    flex-shrink: 0;
+}
+
+.legend-swatch.point {
+    border-radius: 50%;
+}
+
+.legend-swatch.line {
+    height: 4px;
+    border-radius: 2px;
+}
+
+.legend-label {
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.legend-section {
+    margin-bottom: 16px;
+}
+
+.legend-section:last-child {
+    margin-bottom: 0;
+}
+
+.legend-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Scrollbar styling */
+.legend-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.legend-content::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+}
+
+.legend-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.legend-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .legend-panel {
+        bottom: 20px;
+        left: 10px;
+        max-width: 250px;
+    }
+}
+
+/* Animation for toggle */
+.legend-panel {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

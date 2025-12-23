@@ -4,6 +4,14 @@ import GeoRasterLayer from 'georaster-layer-for-leaflet';
 import { getLayerGroup, getMap } from './map.js';
 
 export async function loadRasterLayer() {
+    // Check if raster loading is enabled (disabled in production/Vercel)
+    const enableRaster = import.meta.env.VITE_ENABLE_RASTER !== 'false';
+
+    if (!enableRaster) {
+        console.log('🏔️ Raster layer disabled in production environment');
+        return;
+    }
+
     console.log('🏔️ Loading raster layer (DEM)...');
     try {
         const response = await fetch('/data/demnas_kediri.tif');

@@ -160,16 +160,31 @@ async function fetchCrowdData(table, status) {
 
 function renderTable(tbody, data, isPending) {
     if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5">No ${isPending ? 'pending' : 'approved'} data found</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6">No ${isPending ? 'pending' : 'approved'} data found</td></tr>`;
         return;
     }
 
-    tbody.innerHTML = data.map(item => `
+    tbody.innerHTML = data.map(item => {
+        // Extract coordinates from geometry
+        let coords = null;
+        if (item.geom && item.geom.coordinates) {
+            if (item.geom.type === 'Point') {
+                coords = item.geom.coordinates;
+            } else if (item.geom.type === 'Polygon') {
+                // Get first coordinate of polygon
+                coords = item.geom.coordinates[0][0];
+            }
+        }
+
+        return `
         <tr id="row-${item.id}">
             <td>${item._table.replace('user_', '').replace('uploaded_', '')}</td>
             <td>${item.feature_name || item.name || 'Unnamed'}</td>
             <td>${item.user_id ? item.user_id.substring(0, 8) + '...' : 'System'}</td>
             <td>${new Date(item.created_at).toLocaleDateString()}</td>
+            <td>
+                ${coords ? `<button class="btn-view" onclick="window.viewOnMap(${coords[1]}, ${coords[0]}, '${item.feature_name || item.name || 'Feature'}')">📍 View</button>` : 'N/A'}
+            </td>
             <td>
                 <div class="action-buttons">
                     ${isPending ? `
@@ -180,8 +195,13 @@ function renderTable(tbody, data, isPending) {
                 </div>
             </td>
         </tr>
-    `).join('');
+    `}).join('');
 }
+
+// View on Map functionality
+window.viewOnMap = (lat, lng, name) => {
+    window.open(`/map.html?lat=${lat}&lng=${lng}&zoom=16&name=${encodeURIComponent(name)}`, '_blank');
+};
 
 // --- Actions ---
 

@@ -47,7 +47,7 @@ async function handleFileUpload(event) {
         // Upload to database
         await uploadFeatures(geojson.features, file.name);
 
-        showMessage(`Successfully uploaded ${geojson.features.length} features!`, 'success');
+        showMessage(`Successfully uploaded ${geojson.features.length} features! Pending admin approval.`, 'success');
 
         // Refresh map
         await refreshAllLayers();
@@ -106,28 +106,25 @@ async function uploadFeatures(features, filename) {
     const authState = getAuthState();
 
     const records = features.map(feature => {
-        // Extract name and type from properties
+        // Extract properties
         const props = feature.properties || {};
-        // Try to find a meaningful name
-        const featureName = props.name || props.NAME || props.Name || props.NAMOBJ || 'Unnamed';
-        const featureType = props.type || props.TYPE || props.Type || props.REMARK || 'Unknown';
 
         return {
-            feature_name: featureName,
-            feature_type: featureType,
-            description: props.description || null,
-            source_filename: filename,
-            attributes: props,
-            geom: feature.geometry,
             user_id: authState.user.id,
-            status: 'pending'
+            layer_name: 'user_upload',
+            properties: {
+                ...props,
+                source_filename: filename,
+                uploaded_at: new Date().toISOString()
+            },
+            geom: feature.geometry,
+            status: 'pending' // Requires admin approval
         };
     });
 
-    // Insert into database
+    // Insert into crowd_submissions table (requires admin approval)
     const { data, error } = await supabase
-        .schema('crowd_data')
-        .from('uploaded_features')
+        .from('crowd_submissions')
         .insert(records);
 
     if (error) {

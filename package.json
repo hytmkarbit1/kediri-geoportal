@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "import-data": "node scripts/import-admin-data.js",
-    "import-supabase": "node scripts/import-to-supabase.js"
+    "import-supabase": "node scripts/import-to-supabase.js",
+    "seed-data": "node scripts/seed-data.js",
+    "api:dev": "node api/api-server.js",
+    "api:start": "node api/api-server.js"
   },
   "keywords": [
     "geoportal",
@@ -21,12 +24,15 @@
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.6.1",
+    "express": "^4.18.2",
     "georaster": "^1.6.0",
     "georaster-layer-for-leaflet": "^3.10.0",
     "jszip": "^3.10.1",
     "leaflet": "^1.9.4",
     "leaflet-draw": "^1.0.4",
+    "leaflet.markercluster": "^1.5.3",
     "proj4": "^2.11.0",
     "proj4-fully-loaded": "^0.1.0",
     "shapefile": "^0.6.6",
