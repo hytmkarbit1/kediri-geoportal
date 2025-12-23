@@ -1,8 +1,4 @@
 // Main Application Entry Point
-// CRITICAL: Import proj4 FIRST to make it globally available for georaster
-import proj4 from 'proj4';
-window.proj4 = proj4;
-
 import { initAuth, setupAuthUI } from './auth/auth.js';
 import { initMap, getMap, layerGroups } from './map/map.js';
 import { loadGovernmentLayers, loadCrowdLayers } from './map/layers.js';
@@ -14,8 +10,6 @@ import { LocationSearch } from './components/search.js';
 import { setupUploadUI } from './data/upload.js';
 import { setupDownloadUI, setupDownloadButtons } from './data/download.js';
 import { initDrawingTools, setupDrawingUI } from './data/digitize.js';
-
-import { loadRasterLayer } from './map/raster.js';
 
 // Create global loading progress instance
 const loadingProgress = new LoadingProgress();
@@ -104,7 +98,20 @@ async function init() {
                         const { loadUserPolygons } = await import('./map/layers.js');
                         await loadUserPolygons();
                     } else if (name === 'Elevation (DEM)') {
-                        await loadRasterLayer();
+                        // Conditionally load raster and proj4 only if enabled
+                        const enableRaster = import.meta.env.VITE_ENABLE_RASTER !== 'false';
+                        if (enableRaster) {
+                            // Dynamically import proj4 first
+                            const proj4Module = await import('proj4');
+                            window.proj4 = proj4Module.default;
+                            console.log('✅ Proj4 loaded for raster support');
+
+                            // Then import and load raster layer
+                            const { loadRasterLayer } = await import('./map/raster.js');
+                            await loadRasterLayer();
+                        } else {
+                            console.log('⚠️  Raster layer disabled in production');
+                        }
                     }
 
                     loadedLayers.add(name);
