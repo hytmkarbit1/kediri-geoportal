@@ -81,7 +81,14 @@
 }
 
 .legend-swatch.line {
-    height: 4px;
+    height: 3px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.legend-swatch.raster {
+    width: 60px;
+    height: 16px;
     border-radius: 2px;
 }
 

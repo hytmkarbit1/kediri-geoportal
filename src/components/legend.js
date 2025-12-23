@@ -58,7 +58,8 @@ export class ToggleableLegend {
             'Commercial Points': { color: '#FFD700', type: 'point' }, // Gold (matches commercial_points fillColor)
             'Education Points': { color: '#4169E1', type: 'point' },  // Royal blue (matches education_points fillColor)
             'User Points': { color: '#FF69B4', type: 'point' },       // Hot pink (matches user_points fillColor)
-            'User Polygons': { color: '#DDA0DD', type: 'polygon' }    // Plum (matches user_polygons fillColor)
+            'User Polygons': { color: '#DDA0DD', type: 'polygon' },   // Plum (matches user_polygons fillColor)
+            'Elevation (DEM)': { color: 'linear-gradient(to right, #2d5a27, #4d9221, #a1d76a, #e6f5d0, #fee08b, #fdae61, #f46d43, #d53e4f)', type: 'raster' }  // Terrain gradient
         };
 
         // Group by type
@@ -105,11 +106,18 @@ export class ToggleableLegend {
 
         const swatch = document.createElement('div');
         swatch.className = `legend-swatch ${type}`;
-        swatch.style.backgroundColor = color;
 
-        if (type === 'line') {
+        // Use background for gradients (raster), backgroundColor for solid colors
+        if (type === 'raster') {
+            swatch.style.background = color;
+        } else {
             swatch.style.backgroundColor = color;
-            swatch.style.border = 'none';
+        }
+
+        // Special styling for line type
+        if (type === 'line') {
+            swatch.style.height = '3px';
+            swatch.style.width = '100%';
         }
 
         const labelEl = document.createElement('span');
