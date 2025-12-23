@@ -92,6 +92,20 @@
     border-radius: 2px;
 }
 
+.legend-raster-range {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.legend-range-min,
+.legend-range-max {
+    font-weight: 500;
+}
+
 .legend-label {
     font-size: 13px;
     color: #374151;

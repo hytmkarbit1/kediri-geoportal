@@ -131,6 +131,24 @@ export class ToggleableLegend {
         item.appendChild(swatch);
         item.appendChild(labelEl);
 
+        // Add elevation range for raster type
+        if (type === 'raster' && label === 'Elevation (DEM)') {
+            const rangeContainer = document.createElement('div');
+            rangeContainer.className = 'legend-raster-range';
+
+            const minLabel = document.createElement('span');
+            minLabel.className = 'legend-range-min';
+            minLabel.textContent = '50m';
+
+            const maxLabel = document.createElement('span');
+            maxLabel.className = 'legend-range-max';
+            maxLabel.textContent = '3000m';
+
+            rangeContainer.appendChild(minLabel);
+            rangeContainer.appendChild(maxLabel);
+            item.appendChild(rangeContainer);
+        }
+
         return item;
     }
 
