@@ -62,11 +62,13 @@ export class ToggleableLegend {
             'Elevation (DEM)': { color: 'linear-gradient(to right, #2d5a27, #4d9221, #a1d76a, #e6f5d0, #fee08b, #fdae61, #f46d43, #d53e4f)', type: 'raster' }  // Terrain gradient
         };
 
+
         // Group by type
         const sections = {
             'Polygons': [],
             'Lines': [],
-            'Points': []
+            'Points': [],
+            'Raster': []
         };
 
         Object.entries(layerConfig).forEach(([name, config]) => {
@@ -78,6 +80,8 @@ export class ToggleableLegend {
                 sections['Lines'].push(item);
             } else if (config.type === 'point') {
                 sections['Points'].push(item);
+            } else if (config.type === 'raster') {
+                sections['Raster'].push(item);
             }
         });
 
